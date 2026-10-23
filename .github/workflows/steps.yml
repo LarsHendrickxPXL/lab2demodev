@@ -1,13 +1,13 @@
-name: stappenvoorbeelden 
-on: 
- workflow_dispatch:
+name: stappenvoorbeelden
 
+on:
+  workflow_dispatch:
 
 jobs:
-stappenvoorbeelden:
-runs-on: ubuntu-latest
- steps: 
- - run: mkdir testmachine
- - run: echo "uname -a" > testmachine/output.txt
- - run: cat testmachine/output.txt
- - run: ls -alhR
+  stappenvoorbeelden:
+    runs-on: ubuntu-latest
+    steps:
+      - run: mkdir testmachine
+      - run: uname -a > testmachine/output.txt
+      - run: cat testmachine/output.txt
+      - run: ls -alhR
