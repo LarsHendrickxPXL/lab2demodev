@@ -1,0 +1,18 @@
+name: Mappen en bestanden manipuleren
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bestanden-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Maak een nieuwe directory aan
+        run: mkdir mijn_map
+
+      - name: Schrijf een bestand in de directory met korte tekst
+        run: echo "Dit is een korte testtekst voor de oefening." > mijn_map/info.txt
+
+      - name: Toon de inhoud van de directory in de run-uitvoer
+        run: ls -la mijn_map
+     
