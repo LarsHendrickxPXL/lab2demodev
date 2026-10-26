@@ -1,1 +1,14 @@
+name: Probleemtrigger
 
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  log-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Toon titel en body van het probleem
+        run: |
+          echo "Titel van het probleem: ${{ github.event.issue.title }}"
+          echo "Body van het probleem: ${{ github.event.issue.body }}"
