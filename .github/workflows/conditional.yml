@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Toon gekozen environment
-        run: echo "Gekozen environment: ${{ github.event.inputs.environment }}"
+        run: echo 'Gekozen environment: ${{ github.event.inputs.environment }}'
 
       - name: Production deployment
         if: github.event.inputs.environment == 'production'
